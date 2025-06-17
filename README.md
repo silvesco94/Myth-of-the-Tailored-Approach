@@ -2,7 +2,7 @@
 ## The Numbers Don’t Lie: Pitchers Still Challenge Judge and Ohtani — But Why?
 By Scott Silverstein 
 
-![Image 1](images/1.jpeg)
+![Image 1](1.jpeg)
 *<sub>He may be one of the best hitters in baseball history, but we wouldn’t know it by location data.</sub>*
 
 
@@ -18,29 +18,29 @@ To answer that, I’ll start by zooming way out: looking at the history and evol
 
 ### Evolution of Pitching in the Strikezone
 
-![Image 2](images/2.jpeg)
+![Image 2](2.jpeg)
 
 Aaron Judge is one of the best hitters ever yet Ted Williams got walked over 29% more often than Judge did, 70% more often then Ohtani. This is true for intentional walks too:
 
-![Image 3](images/3.jpeg)
+![Image 3](3.jpeg)
 
 Barry Bonds was intentionally walked approximately 476% more than Aaron Judge in his most intentionally walked season.
 
 This reflects an overal trend in baseball. Times have certainly changed for intentional walks. They have fallen ever since the 90s to mid 00s:
 
-![Image 4](images/4.jpeg)
+![Image 4](4.jpeg)
 
 This is also shown in percentage of overal pitches being pitched in the zone.
 
-![Image 5](images/5.jpeg)
+![Image 5](5.jpeg)
 
 So, maybe this is the answer? Their walk numbers are down because historically walks were more common and more than ever pitchers are throwing in the zone. This is also supported by the data:
 
-![Image 6](images/6.jpeg)
+![Image 6](6.jpeg)
 
 In terms of degrees of separation, with the exception of Ohtani, they are one degree up from the average walk percentage within the past 3 years. So yes, they are indeed getting walked more often to their peers, but not even close to the difference that Barry Bonds was to his.
 
-![Image 8](images/8.jpeg)
+![Image 8](8.jpeg)
 
 Bonds was unarguably the best hitter of his time and aside from any conversation on steriods, it is quite easy to make the argument he was the best ever. But that being said, Judge has broken records and is miles ahead of the rest of the league just like Bonds was. In fact, Bonds era and current era might be the only two periods in time where there is absolutely zero debate to who the best hitter is in baseball.
 
@@ -48,13 +48,13 @@ Bonds was unarguably the best hitter of his time and aside from any conversation
 
 This line gets even fuzzier when you actually take a look at percentage of pitches that are thrown in the zone to each player.
 
-![Image 9](images/9.jpeg)
+![Image 9](9.jpeg)
 *<sub> I took the last three seasons to make sure Ohtani’s statlines are there but to ensure they are focusing on Judge’s truly dominant years.</sub>**
 
 
 Including Soto, another widely considered great hitter, this chart clearly shows that they are almost league average in pitches thrown in the strikezone. In fact:
 
-![Image 10](images/10.jpeg) 
+![Image 10](10.jpeg) 
 
 Ohtani and Judge are within 1 degree of separation from the league average zone%. Take this in, the best hitter in baseball has roughly the same rate of strikes to hit as someone like Ryan McMahon of the Colorado Rockies (not to be mean to McMahon but he has a -5.6 offensive WAR this season).
 
@@ -75,15 +75,15 @@ This creates a holistic measure of how well a player controls the strike zone �
 
 With this stat, I took a look at how they compared. I threw in a notably bad player for swinging at balls, Javier Baez, and a notably good player, Juan Soto, to make sure that the stat passed the eye test:
 
-![Image 11](images/11.jpeg) 
+![Image 11](11.jpeg) 
 
 As you can see Ohtani and Judge are just around league average at this as well. Just in case you don’t trust my new stat, same rings true if you just focus on pitches swung at out of the zone:
 
-![Image 12](images/12.jpeg) 
+![Image 12](12.jpeg) 
 
 So, clearly the patience of the batter does not factor into whether or not pitchers will throw strikes. This really shocked me. I would have thought that there would be some correlation. In fact, this was bugging me so I ran a regression model to see if there was any correlation between outside of the zone swing rate, so how much players chase, and the pitches that get thrown to them in the zone:
 
-![Image 13](images/13.jpeg) 
+![Image 13](13.jpeg) 
 
 There are other metrics, but the main one anyone needs to know is the r-squared statistic of .106. This is extremely low in terms of correlation. Usually for a robust number, you want to something close to 1. So, while this regression model is statistically significant — meaning the relationship we’re measuring is real (shown by the P-value)— the R-squared value is just 0.106, which is quite low. That means the model only explains about 10.6% of the variation in how often pitchers throw pitches in the strike zone. In other words, while the hitter’s out-of-zone swing rate (oz_swing_percent) does have an effect, it’s an extremely small one. The majority of the decision-making behind pitch location likely comes from other factors I haven’t accounted for — like pitch count, batter-pitcher matchups or even randomness.
 
@@ -92,11 +92,11 @@ So clearly, great hitters are still getting pitches in the zone. But what happen
 
 To explore this, I broke down pitch-by-pitch data using the same zone model that Statcast uses — dividing pitch locations into **Heart, Shadow, Chase,** and **Waste** zones (see graphic below, from Baseball Savant):
 
-![Image 14](images/14.jpeg) - 
+![Image 14](14.jpeg) - 
 
 To understand general league behavior, I calculated what percentage of pitches go to each of these zones. Here’s what the distribution looks like:
 
-![Image 15](images/15.jpeg)  
+![Image 15](15.jpeg)  
 
 As expected, pitchers tend to throw most of their pitches in the **Heart** and **Shadow** regions — the places closest to the strike zone. This makes intuitive sense. You can’t get a strikeout without throwing strikes, and pitchers have to attack the zone to avoid walks.
 
@@ -107,7 +107,7 @@ One possible explanation: many modern pitching strategies teach pitchers to aim 
 **So where are they pitching to Judge, Ohtani, and Soto?** 
 Let’s take a look:
 
-![Image 16](images/16.jpeg) 
+![Image 16](16.jpeg) 
 
 According to the data:
   - Judge sees only about 1 percentage point fewer pitches in the Heart than league average.
@@ -115,8 +115,8 @@ According to the data:
     
 Anecdotally, that feels absurd. Judge, in particular, is clearly more than “one tick” better than the average hitter. To reinforce that, I looked at **slugging percentage on pitches in the heart of the zone.** 
 
-![Image 18](images/18.jpeg) 
-![Image 19](images/19.jpeg) 
+![Image 18](18.jpeg) 
+![Image 19](19.jpeg) 
 
 And yep — Judge and Ohtani are **number one and number two in baseball** in slugging on heart-of-the-zone pitches.
 
@@ -124,7 +124,7 @@ So why are they still seeing average (or near-average) rates of pitches in the H
 
 This begs the question what is the rest of the league seeing in terms of location around the zone and how does it correlate with hitting stats?
 
-![Image 20](images/20.jpeg)  
+![Image 20](20.jpeg)  
 *<sub>Heatmap showing correlations between stats zone location and hitting stats</sub>*
 
 So within this graphic, it definitely shows that there is some correlation between the quality of hitting and the location of the pitches thrown to the hitter. There is a clear inverse correlation between how good a hitter is and how often they see pitches in the heart of the zone (zone 1). wOBA and SLG all show negative correlations- meaning that as those offensive numbers go up, the percentage of pitches hitters see in the heart of the zone goes down. This continues with stats like barrel rates and hard hit percentages as well.
@@ -137,7 +137,7 @@ This is not the whole story however, we have to take a look how the zones overla
 
 *Do location patterns differ between quality of hitters?*
 
-![Image 21](images/21.jpeg)  
+![Image 21](21.jpeg)  
 
 The two-way ANOVA model tells us whether two factors — hitter quality (Elite, Average, Poor) and pitch zone (Heart, Shadow, Chase) — meaningfully affect how pitches are distributed, and whether these two factors interact.
 
@@ -157,8 +157,8 @@ This boxplot shows the distribution of pitch locations — categorized into Hear
 
 I thought I would take a look at not location but pitch type: curves, sliders, etc. to see if there is a measurable difference. Using wrc+ as a metric to establish the quality of hitter and set them into above average, average, and below average, I took a look to see distribution of pitches thrown to each category of hitter:
 
-![Image 22](images/22.jpeg)  
-![Image 23](images/23.jpeg)  
+![Image 22](22.jpeg)  
+![Image 23](23.jpeg)  
 
 This heatmap shows how each hitter tier (based on wRC+) deviates from the league-average pitch mix across eight pitch types. The numbers represent percentage point differences from the mean. For example, “Below Average” hitters see fastballs (FB%) about 12.18 percentage points more often than the league average, while “Above Average” hitters see them 6.89 points less.
 
@@ -172,7 +172,7 @@ This visualization supports the idea that pitch selection does adjust with hitte
 
 Let’s take a deeper look:
 
-![Image 24](images/24.jpeg)  
+![Image 24](24.jpeg)  
 
 This chart shows how often hitters of different performance levels are thrown fastballs versus offspeed pitches. Hitters are grouped into three tiers based on their wRC+ — a comprehensive offensive stat — and their pitch mix is broken down into two categories: Fastball% and Offspeed%.
 
