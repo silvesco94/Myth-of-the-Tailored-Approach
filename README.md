@@ -4,6 +4,8 @@ By Scott Silverstein
 
 ![Image 1](1.jpeg)
 
+
+
 *<sub>He may be one of the best hitters in baseball history, but we wouldn’t know it by location data.</sub>*
 
 
