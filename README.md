@@ -58,7 +58,7 @@ Including Soto, another widely considered great hitter, this chart clearly shows
 
 ![Image 10](10.jpeg) 
 
-Ohtani and Judge are within 1 degree of separation from the league average zone%. Take this in, the best hitter in baseball has roughly the same rate of strikes to hit as someone like Ryan McMahon of the Colorado Rockies (not to be mean to McMahon but he has a -5.6 offensive WAR this season).
+Ohtani and Judge are within 1 degree of separation from the league average zone%. Take this in, the best hitter in baseball has roughly the same rate of strikes to hit as someone like Ryan McMahon of the Colorado Rockies (not to be mean to McMahon but he had a -11.3 offensive WAR for the 2024 season).
 
 Then I thought, maybe they know that if they do throw Judge or Ohtani a ball they won’t swing at it. I had to determine how to measure plate discipline for this. So, I made my own stat: Plate Discipline Composite (PDC) Score, which aggregates multiple advanced plate discipline metrics into a single 0–1 score.
 
