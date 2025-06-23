@@ -50,7 +50,8 @@ Bonds was unarguably the best hitter of his time and aside from any conversation
 This line gets even fuzzier when you actually take a look at percentage of pitches that are thrown in the zone to each player.
 
 ![Image 9](9.jpeg)
-*<sub> I took the last three seasons to make sure Ohtani’s statlines are there but to ensure they are focusing on Judge’s truly dominant years.</sub>**
+
+*<sub> I took the last three seasons to make sure Ohtani’s statlines are there but to ensure they are focusing on Judge’s truly dominant years.</sub>*
 
 
 Including Soto, another widely considered great hitter, this chart clearly shows that they are almost league average in pitches thrown in the strikezone. In fact:
