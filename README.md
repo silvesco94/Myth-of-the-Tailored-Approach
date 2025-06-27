@@ -7,180 +7,253 @@ By Scott Silverstein
 *<sub>He may be one of the best hitters in baseball history, but we wouldn’t know it by location data.</sub>*
 
 
-I love baseball! I’ve been playing it since I was 3 years old, and to this day, I’m still out on the field. It’s the most cerebral game I’ve ever played, and I love the strategy behind it.
+I’ve loved baseball since I was three years old. To this day, I’m still out on the field, chasing that perfect swing. It’s the most cerebral game I’ve ever played — full of nuance, strategy, and a constant evolution of thinking.
 
-One of my favorite aspects of the game is how decision-making has evolved with data. Through tools like FanGraphs, Baseball Savant, teams hiring PhDs in statistics, and even popularized in movies like Moneyball, the conversation around baseball has shifted. We’ve moved away from outdated stats like pitcher wins and losses toward more advanced metrics like Expected Fielding Independent Pitching (xFIP) and beyond.
+What excites me most is how decision-making in baseball has changed with data. Tools like [FanGraphs](https://www.fangraphs.com/) and [Baseball Savant](https://baseballsavant.mlb.com/), teams hiring PhDs, and even the influence of *Moneyball* have shifted the conversation. We've moved past outdated stats like pitcher wins and embraced advanced metrics like Expected Fielding Independent Pitching (xFIP) and beyond.
 
-With the rise of data-driven decisions, I’ve come to trust most teams — perhaps with the exception of the Rockies and White Sox — like a kid trusts their parents: assuming they can do no wrong . But recently, I’ve started to second-guess that trust. All because a question that has been nagging at me lately:
+For a while, I trusted front offices like a kid trusts their parents — assuming they always knew best (maybe with the exception of the Rockies and White Sox). But recently, a question has been nagging at me:
 
-**Why in the world are pitchers still challenging Aaron Judge and Shohei Ohtani with pitches in the zone?**
+**Why are pitchers still challenging Aaron Judge and Shohei Ohtani in the strike zone?**
 
-To answer that, I’ll start by zooming way out: looking at the history and evolution of pitching in the strike zone. Then I’ll narrow the focus — first to how Judge and Ohtani compare to their peers in walk rates, then how they’re pitched in and out of the strike zone, and finally, which exact zones they’re seeing pitches in. Step by step, we’ll break it down and try to answer that tough question throwing in some modeling here and there to build confidence.
+To answer that, I’m taking a wide-angle view — starting with the historical trends of pitching in the zone. Then, I’ll narrow in: first by comparing Judge and Ohtani’s walk rates to their peers, then by analyzing where they’re being pitched — in and out of the zone, and ultimately, which specific zones they’re seeing. Along the way, I’ll build models to support the analysis and try to make sense of why baseball’s brightest minds still throw strikes to two of its most dangerous hitters.
 
-### Evolution of Pitching in the Strikezone
+
+### Evolution of Pitching in the Strike Zone
 
 ![Image 2](2.jpeg)
 
-Aaron Judge is one of the best hitters ever yet Ted Williams got walked over 29% more often than Judge did, 70% more often then Ohtani. This is true for intentional walks too:
+Aaron Judge is one of the best hitters of this generation — yet Ted Williams was walked over **29% more often** than Judge, and **70% more often** than Shohei Ohtani. This disparity extends to intentional walks as well:
 
 ![Image 3](3.jpeg)
 
-Barry Bonds was intentionally walked approximately 476% more than Aaron Judge in his most intentionally walked season.
+Barry Bonds was intentionally walked approximately **476% more** than Aaron Judge during their respective peak seasons.
 
-This reflects an overal trend in baseball. Times have certainly changed for intentional walks. They have fallen ever since the 90s to mid 00s:
+This isn’t just about individual cases — it reflects a broader trend across MLB. Intentional walks have steadily declined since the 1990s and mid-2000s:
 
 ![Image 4](4.jpeg)
 
-This is also shown in percentage of overal pitches being pitched in the zone.
+At the same time, pitchers are attacking the zone more aggressively overall. The percentage of pitches thrown in the strike zone has risen:
 
 ![Image 5](5.jpeg)
 
-So, maybe this is the answer? Their walk numbers are down because historically walks were more common and more than ever pitchers are throwing in the zone. This is also supported by the data:
+So, is this the answer? Are lower walk numbers simply a product of modern pitching trends? The data suggests that could be the case:
 
 ![Image 6](6.jpeg)
 
-In terms of degrees of separation, with the exception of Ohtani, they are one degree up from the average walk percentage within the past 3 years. So yes, they are indeed getting walked more often to their peers, but not even close to the difference that Barry Bonds was to his.
+With the exception of Ohtani, Judge and other elite hitters are just one degree above the league average in walk rate over the past three years. So while they’re walked more than their peers, the gap is nowhere near what it was between Barry Bonds and the rest of the league in his prime.
 
 ![Image 8](8.jpeg)
 
-Bonds was unarguably the best hitter of his time and aside from any conversation on steriods, it is quite easy to make the argument he was the best ever. But that being said, Judge has broken records and is miles ahead of the rest of the league just like Bonds was. In fact, Bonds era and current era might be the only two periods in time where there is absolutely zero debate to who the best hitter is in baseball.
+Bonds was unquestionably the most feared hitter of his era — and possibly of all time. Steroids aside, his statistical dominance made that clear. But Judge has also broken records and distanced himself from the rest of the league in a similar way. Bonds’ era and the current one may be the only two periods in baseball history where the title of “best hitter in the world” are virtually uncontested.
 
-### Zoom In: Zone Percentage 
+### Zoom In: Zone Percentage
 
-This line gets even fuzzier when you actually take a look at percentage of pitches that are thrown in the zone to each player.
+The story gets even murkier when we look at how often top hitters actually see pitches in the strike zone.
 
 ![Image 9](9.jpeg)
 
-*<sub> I took the last three seasons to make sure Ohtani’s statlines are there but to ensure they are focusing on Judge’s truly dominant years.</sub>*
+<sub>I used the last three seasons to ensure Ohtani’s data is comprehensive, while keeping the focus on Judge’s most dominant years.</sub>
 
+Including Juan Soto — another widely regarded elite hitter — this chart shows that these stars are being pitched in the zone at rates very close to league average. In fact:
 
-Including Soto, another widely considered great hitter, this chart clearly shows that they are almost league average in pitches thrown in the strikezone. In fact:
+![Image 10](10.jpeg)
 
-![Image 10](10.jpeg) 
+Judge and Ohtani are within **one degree of separation** from the league average zone%. Think about that — two of the best hitters in baseball are getting about the same percentage of strikes as Ryan McMahon of the Rockies, who posted a -11.3 offensive WAR in 2024. (No shade to McMahon — just context.)
 
-Ohtani and Judge are within 1 degree of separation from the league average zone%. Take this in, the best hitter in baseball has roughly the same rate of strikes to hit as someone like Ryan McMahon of the Colorado Rockies (not to be mean to McMahon but he had a -11.3 offensive WAR for the 2024 season).
+That got me thinking: maybe pitchers throw strikes to Judge and Ohtani because they **don’t swing at bad pitches**. If that’s true, it should show up in their plate discipline.
 
-Then I thought, maybe they know that if they do throw Judge or Ohtani a ball they won’t swing at it. I had to determine how to measure plate discipline for this. So, I made my own stat: Plate Discipline Composite (PDC) Score, which aggregates multiple advanced plate discipline metrics into a single 0–1 score.
+---
 
-**How the PDC Score Was Built: I used the following stats:**
+#### Introducing the Plate Discipline Composite (PDC) Score
 
-1) Lower is better (inverted): O-Swing%, Z-Swing%, Swing%, SwStr%, F-Strike%, CSW%
+To test this idea, I created a new stat: the **Plate Discipline Composite (PDC)** — a 0–1 score that aggregates several advanced plate discipline metrics into one number.
 
-2) Higher is better: O-Contact%, Z-Contact%, Contact%, CStr%, BB%, Zone%
+**Metrics used:**
+
+- *Inverted (lower is better)*: `O-Swing%`, `Z-Swing%`, `Swing%`, `SwStr%`, `F-Strike%`, `CSW%`
+- *Positive (higher is better)*: `O-Contact%`, `Z-Contact%`, `Contact%`, `CStr%`, `BB%`, `Zone%`
 
 **Steps:**
 
-Normalize each stat to a 0–1 scale.
-Invert the ones where a lower value means better discipline.
-Average all stats to get the final PDC Score.
-This creates a holistic measure of how well a player controls the strike zone — not just by walks, but by swing decisions, contact quality, and zone judgment.
+1. Normalize each stat on a 0–1 scale.
+2. Invert the stats where lower values represent better discipline.
+3. Average everything to create the final PDC Score.
 
-With this stat, I took a look at how they compared. I threw in a notably bad player for swinging at balls, Javier Baez, and a notably good player, Juan Soto, to make sure that the stat passed the eye test:
+This gives us a more holistic view of plate discipline — one that captures swing decisions, contact quality, and overall zone control.
 
-![Image 11](11.jpeg) 
+---
 
-As you can see Ohtani and Judge are just around league average at this as well. Just in case you don’t trust my new stat, same rings true if you just focus on pitches swung at out of the zone:
+### Eye Test: Does the PDC Score Work?
 
-![Image 12](12.jpeg) 
+To see if the stat passed the sniff test, I compared a few known profiles:
+- Javier Báez (notorious chaser)
+- Juan Soto (elite zone controller)
+- Judge and Ohtani
 
-So, clearly the patience of the batter does not factor into whether or not pitchers will throw strikes. This really shocked me. I would have thought that there would be some correlation. In fact, this was bugging me so I ran a regression model to see if there was any correlation between outside of the zone swing rate, so how much players chase, and the pitches that get thrown to them in the zone:
+![Image 11](11.jpeg)
 
-![Image 13](13.jpeg) 
+As expected, Báez ranked low and Soto ranked high — with Judge and Ohtani hovering around league average.
 
-There are other metrics, but the main one anyone needs to know is the r-squared statistic of .106. This is extremely low in terms of correlation. Usually for a robust number, you want to something close to 1. So, while this regression model is statistically significant — meaning the relationship we’re measuring is real (shown by the P-value)— the R-squared value is just 0.106, which is quite low. That means the model only explains about 10.6% of the variation in how often pitchers throw pitches in the strike zone. In other words, while the hitter’s out-of-zone swing rate (oz_swing_percent) does have an effect, it’s an extremely small one. The majority of the decision-making behind pitch location likely comes from other factors I haven’t accounted for — like pitch count, batter-pitcher matchups or even randomness.
+Still skeptical? Here’s a simpler comparison: just looking at the rate of swings on pitches outside the strike zone:
+
+![Image 12](12.jpeg)
+
+Same story — Judge and Ohtani chase at about average rates.
+
+---
+
+###  So Does Discipline Influence Zone%?
+
+I was surprised by this. I expected a clear relationship between chase rate and how often pitchers throw in the zone. To investigate, I built a regression model:
+
+- **Input (x-axis)**: `O-Swing%` (chase rate)
+- **Output (y-axis)**: `Zone%` (how often hitters are pitched in the zone)
+
+![Image 13](13.jpeg)
+
+The result?
+
+- **R² = 0.106** — a very weak relationship.
+- While statistically significant (thanks to a strong p-value), the model only explains **10.6%** of the variation in Zone%.
+
+---
+
+### Takeaway
+
+Yes, players who chase more may see more pitches in the zone — **but barely**. Plate discipline, at least measured this way, plays a **minimal role** in how pitchers choose to attack hitters.
+
+The decision to throw strikes likely depends far more on context: pitch count, scouting reports, matchups, or even randomness. This adds another layer of mystery to why Judge and Ohtani aren’t avoided more often.
+
+
 
 ### Zoom In: Pitch Location
-So clearly, great hitters are still getting pitches in the zone. But what happens if I zoom in even further and look at where those pitches are being thrown within the zone?
 
-To explore this, I broke down pitch-by-pitch data using the same zone model that Statcast uses — dividing pitch locations into **Heart, Shadow, Chase,** and **Waste** zones (see graphic below, from Baseball Savant):
+So clearly, great hitters are still seeing pitches in the strike zone. But what happens when we zoom in further — into **where** those pitches are located within the zone?
 
-![Image 14](14.jpeg) - 
+To explore this, I used Statcast's pitch zone model, which breaks pitch locations into four regions:
 
-To understand general league behavior, I calculated what percentage of pitches go to each of these zones. Here’s what the distribution looks like:
+- **Heart**
+- **Shadow**
+- **Chase**
+- **Waste**
 
-![Image 15](15.jpeg)  
+Here’s the visual model from Baseball Savant:
 
-As expected, pitchers tend to throw most of their pitches in the **Heart** and **Shadow** regions — the places closest to the strike zone. This makes intuitive sense. You can’t get a strikeout without throwing strikes, and pitchers have to attack the zone to avoid walks.
+![Image 14](14.jpeg)
 
-That said, I was honestly surprised by how **small the gap** was between Heart and Shadow locations. I expected more pitches to be directed toward the Shadow — around the edges — especially given the increased emphasis on avoiding barrels and inducing weak contact.
+---
 
-One possible explanation: many modern pitching strategies teach pitchers to aim for the **middle of the zone** and rely on pitch movement to pull the ball toward the edge. Every so often, those pitches don’t break as expected and end up staying in the heart of the zone — right where elite hitters can do the most damage.
+### 📊 Leaguewide Location Distribution
 
-**So where are they pitching to Judge, Ohtani, and Soto?** 
-Let’s take a look:
+To understand league behavior, I calculated how pitches are distributed across these zones:
 
-![Image 16](16.jpeg) 
+![Image 15](15.jpeg)
 
-According to the data:
-  - Judge sees only about 1 percentage point fewer pitches in the Heart than league average.
-  - Ohtani and Soto? Almost identical to league average.
-    
-Anecdotally, that feels absurd. Judge, in particular, is clearly more than “one tick” better than the average hitter. To reinforce that, I looked at **slugging percentage on pitches in the heart of the zone.** 
+Most pitches land in the **Heart** and **Shadow** zones — areas close to or within the strike zone. That’s expected. Pitchers need to throw strikes to avoid walks and stay competitive.
 
-![Image 18](18.jpeg) 
-![Image 19](19.jpeg) 
+What surprised me was how **small the gap** was between Heart and Shadow zones. I expected more pitches to hug the edges of the zone, given today’s emphasis on avoiding barrels and inducing weak contact.
 
-And yep — Judge and Ohtani are **number one and number two in baseball** in slugging on heart-of-the-zone pitches.
+One theory: modern pitchers often aim for the middle and rely on pitch movement to land on the edges. When those pitches don’t break as expected, they stay in the Heart — right where hitters do the most damage.
 
-So why are they still seeing average (or near-average) rates of pitches in the Heart? It doesn’t make sense.
+---
 
-This begs the question what is the rest of the league seeing in terms of location around the zone and how does it correlate with hitting stats?
+### 🎯 Where Are Pitchers Throwing to Judge, Ohtani, and Soto?
+
+![Image 16](16.jpeg)
+
+- Judge sees only about **1 percentage point fewer** pitches in the Heart than league average.
+- Ohtani and Soto? Nearly **identical** to the league average.
+
+That feels off — especially for Judge, who’s clearly not a “just above average” hitter.
+
+To highlight the issue, I looked at **slugging percentage on Heart zone pitches**:
+
+![Image 18](18.jpeg)
+![Image 19](19.jpeg)
+
+No surprise: **Judge and Ohtani rank #1 and #2 in MLB** in slugging on Heart pitches.
+
+Yet they continue to get pitched in the Heart at average rates.
+
+---
+
+### 🔍 Correlation Between Hitting Stats & Pitch Location
+
+So I asked: how does location correlate with offensive performance across the league?
 
 ![Image 20](20.jpeg)  
-*<sub>Heatmap showing correlations between stats zone location and hitting stats</sub>*
+<sub>Heatmap showing correlations between zone location and hitting metrics</sub>
 
-So within this graphic, it definitely shows that there is some correlation between the quality of hitting and the location of the pitches thrown to the hitter. There is a clear inverse correlation between how good a hitter is and how often they see pitches in the heart of the zone (zone 1). wOBA and SLG all show negative correlations- meaning that as those offensive numbers go up, the percentage of pitches hitters see in the heart of the zone goes down. This continues with stats like barrel rates and hard hit percentages as well.
+Key findings:
 
-In the shadow zone (zone 2), it shows a similar trend but actually with slightly weaker correlations. It does seem that pitchers do reduce shadow zone usage a bit for elite hitters, though not as sharply as they do in the zone.
+- **Heart zone (Zone 1)**: Strong **negative correlation** with `wOBA`, `SLG`, `barrel%`, and `hard hit%`. The better the hitter, the fewer pitches they see in the Heart.
+- **Shadow zone (Zone 2)**: Similar, but **slightly weaker** negative correlations.
+- **Chase & Waste zones (Zones 3 & 4)**: Positive correlation. Better hitters see **more** pitches in these harder-to-hit regions.
 
-Also understandibly, the opposite is true for chase zone (zone 3) and waste zone (zone 4). These show positive correlations with hitting stats. This means better hitters are seeing more pitches thrown in areas unlikely to be hit well, reflecting the strategy of intentionally avoiding the strike zone altogether (throw it away and hope that they maybe bite at it).
+In short: pitchers are avoiding the zone — particularly the Heart — against top hitters. But how much are they really adjusting?
 
-This is not the whole story however, we have to take a look how the zones overlap to see how much a difference the correlation is making. In other words, there may be a difference, but how different. For that I used what is called an ANOVA model, which will seaparate hitters into an elite, average, and poor hitter category and then see how those groups get pitched to in order to answer the question:
+---
 
-*Do location patterns differ between quality of hitters?*
+### 🧪 ANOVA: Do Location Patterns Differ by Hitter Quality?
 
-![Image 21](21.jpeg)  
+To measure **practical differences**, I ran a two-way ANOVA using three hitter tiers — **Elite**, **Average**, and **Poor** — and the three main pitch zones.
 
-The two-way ANOVA model tells us whether two factors — hitter quality (Elite, Average, Poor) and pitch zone (Heart, Shadow, Chase) — meaningfully affect how pitches are distributed, and whether these two factors interact.
+![Image 21](21.jpeg)
 
-In this case, all effects were statistically significant, which means that the differences I observed in the data — between how elite hitters are pitched to versus poor hitters, and across different zones — are unlikely to be due to random chance alone. The p-values for the hitter tier, zone, and their interaction were all extremely low (well below the common threshold of 0.05), confirming that the model has picked up real patterns in the data.
+**Results:**
+- All effects (hitter tier, zone, and their interaction) were statistically significant (p < 0.05).
+- This confirms real differences in pitch location patterns by hitter quality and zone.
 
-However, statistical significance doesn’t always mean practical significance. When we look at the boxplot, we can see that although the average pitch distributions vary slightly between hitter tiers, the overall spread and overlap of the distributions are large. That means pitchers aren’t drastically changing their approach based on hitter quality — elite hitters are pitched to in much the same way as poor hitters.
+**But** — statistical significance ≠ practical significance.
 
-In essence:
+The boxplot reveals **large overlap** in how zones are distributed across hitter tiers. So while elite hitters see slightly fewer Heart pitches and slightly more Shadow/Chase pitches, the overall differences are **minor**.
 
-*Yes, the data shows real, measurable differences, but those differences are small in size. Pitchers seem to follow a fairly consistent strategy, regardless of who is at the plate.*
+**Takeaway**: Pitchers make only **modest location adjustments** based on hitter quality. A consistent strategy is applied to most hitters, elite or not.
 
-This suggests that while pitchers may make slight tactical adjustments, they are largely not tailoring pitch locations significantly to the caliber of the hitter — possibly due to limitations in command, risk aversion, or broader pitching philosophies.
+---
 
-This boxplot shows the distribution of pitch locations — categorized into Heart, Shadow, and Chase zones — across different tiers of hitters (Poor, Average, Elite). Each box represents how often pitches were thrown to each zone, depending on hitter quality. While Elite hitters receive slightly fewer pitches in the Heart zone and slightly more in the Shadow, the overlap between groups is substantial. This visual reinforces the statistical conclusion: pitchers make only marginal adjustments based on hitter quality, with a broadly consistent pitch location strategy across the board.
+### 🔄 If Not Location, Then What? Let's Talk Pitch Type
 
-**If they are not making strategic decisions based on locations of the pitches that they throw, what decisions are they making?** 
+Maybe pitchers aren’t changing location — but are they adjusting **pitch selection**?
 
-I thought I would take a look at not location but pitch type: curves, sliders, etc. to see if there is a measurable difference. Using wrc+ as a metric to establish the quality of hitter and set them into above average, average, and below average, I took a look to see distribution of pitches thrown to each category of hitter:
+To test this, I grouped hitters by wRC+ (a comprehensive offensive metric) into:
 
-![Image 22](22.jpeg)  
-![Image 23](23.jpeg)  
+- **Above Average**
+- **Average**
+- **Below Average**
 
-This heatmap shows how each hitter tier (based on wRC+) deviates from the league-average pitch mix across eight pitch types. The numbers represent percentage point differences from the mean. For example, “Below Average” hitters see fastballs (FB%) about 12.18 percentage points more often than the league average, while “Above Average” hitters see them 6.89 points less.
+Then I looked at pitch mix across groups.
 
-Key takeaways:
+![Image 22](22.jpeg)
+![Image 23](23.jpeg)
 
-  1) Below Average hitters are overwhelmingly attacked with more fastballs, suggesting pitchers are more aggressive or challenge them.
-  2) Above Average hitters receive fewer fastballs, indicating pitchers may avoid giving them easier pitches to hit.
-  3) There’s subtle variation in offspeed and breaking pitches, but the clearest divergence is in fastball usage.
+**Heatmap Insight:**
+- **Below Average** hitters see **12.18% more fastballs** than league average.
+- **Above Average** hitters see **6.89% fewer fastballs**.
+- Changes in offspeed/breaking pitch usage are smaller, but the trend is clear.
 
-This visualization supports the idea that pitch selection does adjust with hitter quality — but primarily through the use of fastballs.
+Pitchers are **challenging weaker hitters with fastballs**, and relying on **deception** (offspeed pitches) against better hitters.
 
-Let’s take a deeper look:
+---
 
-![Image 24](24.jpeg)  
+### 🔍 Fastballs vs. Offspeed: A Deeper Look
 
-This chart shows how often hitters of different performance levels are thrown fastballs versus offspeed pitches. Hitters are grouped into three tiers based on their wRC+ — a comprehensive offensive stat — and their pitch mix is broken down into two categories: Fastball% and Offspeed%.
+![Image 24](24.jpeg)
 
-The data reveals that below average hitters tend to see more fastballs, as shown by their higher Fastball% values. In contrast, above average hitters face more offspeed pitches, likely a strategic move by pitchers to disrupt timing and avoid hard contact. Average hitters fall somewhere in the middle, with moderate exposure to both pitch types and a wider range of variation.
+This chart breaks it down further by Fastball% and Offspeed%:
 
-Overall, the chart suggests a clear trend: pitchers adjust their pitch mix based on hitter quality, relying more on fastballs against weaker hitters and offspeed pitches against stronger ones.
+- **Below Average** hitters → More fastballs.
+- **Above Average** hitters → More offspeed pitches.
+- **Average** hitters sit in between.
+
+---
+
+### Final Takeaway
+
+While pitch **location** only changes marginally with hitter quality, **pitch type** shows a more defined trend. Pitchers **reduce fastball usage** and mix in more breaking/offspeed stuff against better hitters — likely to avoid hard contact and disrupt timing.
+
+So the strategy seems to be:
+- **Pitch around with stuff**, not with location.
 
 ### So do we have an answer?
 
