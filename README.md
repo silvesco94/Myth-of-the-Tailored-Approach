@@ -204,9 +204,6 @@ This heatmap shows how different pitch zone locations (Zone 1: Heart, Zone 2: Sh
 
 - **Chase & Waste zones (Zones 3 & 4)**: Positive correlation. Better hitters see more pitches in these harder-to-hit regions — likely because pitchers are trying to get them to chase.
 
-In short: pitchers are avoiding the strike zone — particularly the Heart — when facing top hitters. But how much are they really adjusting?
----
-
 #### But Correlation Isn’t the Whole Story...
 
 While the heatmap shows strong relationships between pitch location and hitting performance, it only tells us that a relationship exists — not how large or meaningful those differences are in practice.
@@ -214,6 +211,10 @@ While the heatmap shows strong relationships between pitch location and hitting 
 For example, even if elite hitters see fewer Heart-zone pitches on average, that doesn’t tell us *how much less*, or whether that difference is consistent across groups. We need a way to separate hitters into tiers and compare the actual distributions of pitch locations across those tiers.
 
 That’s where an ANOVA model comes in — to measure not just **whether** there's a relationship, but **how big** it is and whether it truly impacts how pitchers approach different types of hitters.
+
+In short: pitchers are avoiding the strike zone — particularly the Heart — when facing top hitters. But how much are they really adjusting?
+---
+
 
 ### ANOVA: Do Location Patterns Differ by Hitter Quality?
 
