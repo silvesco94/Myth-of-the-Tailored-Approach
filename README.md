@@ -153,7 +153,7 @@ Here’s the visual model from Baseball Savant:
 
 ---
 
-### 📊 Leaguewide Location Distribution
+### Leaguewide Location Distribution
 
 To understand league behavior, I calculated how pitches are distributed across these zones:
 
@@ -167,7 +167,7 @@ One theory: modern pitchers often aim for the middle and rely on pitch movement 
 
 ---
 
-### 🎯 Where Are Pitchers Throwing to Judge, Ohtani, and Soto?
+### Where Are Pitchers Throwing to Judge, Ohtani, and Soto?
 
 ![Image 16](16.jpeg)
 
@@ -187,7 +187,7 @@ Yet they continue to get pitched in the Heart at average rates.
 
 ---
 
-### 🔍 Correlation Between Hitting Stats & Pitch Location
+### Correlation Between Hitting Stats & Pitch Location
 
 So I asked: how does location correlate with offensive performance across the league?
 
@@ -204,7 +204,7 @@ In short: pitchers are avoiding the zone — particularly the Heart — against 
 
 ---
 
-### 🧪 ANOVA: Do Location Patterns Differ by Hitter Quality?
+### ANOVA: Do Location Patterns Differ by Hitter Quality?
 
 To measure **practical differences**, I ran a two-way ANOVA using three hitter tiers — **Elite**, **Average**, and **Poor** — and the three main pitch zones.
 
@@ -222,7 +222,7 @@ The boxplot reveals **large overlap** in how zones are distributed across hitter
 
 ---
 
-### 🔄 If Not Location, Then What? Let's Talk Pitch Type
+### If Not Location, Then What? Let's Talk Pitch Type
 
 Maybe pitchers aren’t changing location — but are they adjusting **pitch selection**?
 
@@ -246,7 +246,7 @@ Pitchers are **challenging weaker hitters with fastballs**, and relying on **dec
 
 ---
 
-### 🔍 Fastballs vs. Offspeed: A Deeper Look
+### Fastballs vs. Offspeed: A Deeper Look
 
 ![Image 24](24.jpeg)
 
