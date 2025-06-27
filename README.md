@@ -7,15 +7,25 @@ By Scott Silverstein
 *<sub>He may be one of the best hitters in baseball history, but we wouldn’t know it by location data.</sub>*
 
 
-I’ve loved baseball since I was three years old. To this day, I’m still out on the field, chasing that perfect swing. It’s the most cerebral game I’ve ever played — full of nuance, strategy, and a constant evolution of thinking.
+### Introduction
 
-What excites me most is how decision-making in baseball has changed with data. Tools like [FanGraphs](https://www.fangraphs.com/) and [Baseball Savant](https://baseballsavant.mlb.com/), teams hiring PhDs, and even the influence of *Moneyball* have shifted the conversation. We've moved past outdated stats like pitcher wins and embraced advanced metrics like Expected Fielding Independent Pitching (xFIP) and beyond.
+**Why are pitchers still throwing strikes to Aaron Judge and Shohei Ohtani?**
 
-For a while, I trusted front offices like a kid trusts their parents — assuming they always knew best (maybe with the exception of the Rockies and White Sox). But recently, a question has been nagging at me:
+That question has been bouncing around in my head for months.
 
-**Why are pitchers still challenging Aaron Judge and Shohei Ohtani in the strike zone?**
+These aren’t just good hitters — they’re once-in-a-generation talents. Judge is breaking records. Ohtani is rewriting what we thought was possible. And yet, they’re being pitched like... average stars. Not walked at Bonds-like rates. Still seeing pitches in the strike zone. Still getting challenged.
 
-To answer that, I’m taking a wide-angle view — starting with the historical trends of pitching in the zone. Then, I’ll narrow in: first by comparing Judge and Ohtani’s walk rates to their peers, then by analyzing where they’re being pitched — in and out of the zone, and ultimately, which specific zones they’re seeing. Along the way, I’ll build models to support the analysis and try to make sense of why baseball’s brightest minds still throw strikes to two of its most dangerous hitters.
+I’ve loved baseball since I was three years old. I’m still out there playing, chasing that perfect swing. To me, it’s the most cerebral game there is — full of nuance, psychology, and constant evolution. 
+
+What excites me most today is how much the game has embraced data: FanGraphs, Baseball Savant, PhDs in front offices, and metrics like xFIP and wOBA have reshaped everything from scouting reports to in-game decisions.
+
+And I’ve trusted that evolution. For the most part, I still do — maybe with the exception of the Rockies and White Sox. But this one thing doesn’t add up.
+
+So I set out to find an answer.
+
+I’ll start with history — how hitters like Barry Bonds were treated. Then I’ll narrow in: looking at how often Judge and Ohtani are walked, where they’re being pitched, and what types of pitches they see. Along the way, I’ll build models to test assumptions, validate instincts, and try to understand what might be the strangest strategy in modern baseball:
+
+**Why are pitchers still challenging greatness?**
 
 
 ### Evolution of Pitching in the Strike Zone
