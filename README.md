@@ -196,7 +196,7 @@ So I asked: how does location correlate with offensive performance across the le
 
 This heatmap shows how different pitch zone locations (Zone 1: Heart, Zone 2: Shadow, Zone 3: Chase, Zone 4: Waste) correlate with common offensive stats. A **negative value** means that as a stat increases (e.g., SLG or wOBA), that pitch location is seen **less** often. A **positive value** means better hitters see that type of pitch location **more** often. Correlation values closer to -1 or 1 indicate stronger relationships; values near 0 suggest little to no connection.
 
-**Key findings:**
+#### Key findings:
 
 - **Heart zone (Zone 1)**: Strong negative correlation with `wOBA`, `SLG`, `barrel%`, and `hard hit%`. The better the hitter, the fewer pitches they see in the Heart.
 
@@ -207,9 +207,29 @@ This heatmap shows how different pitch zone locations (Zone 1: Heart, Zone 2: Sh
 In short: pitchers are avoiding the strike zone — particularly the Heart — when facing top hitters. But how much are they really adjusting?
 ---
 
+#### But Correlation Isn’t the Whole Story...
+
+While the heatmap shows strong relationships between pitch location and hitting performance, it only tells us that a relationship exists — not how large or meaningful those differences are in practice.
+
+For example, even if elite hitters see fewer Heart-zone pitches on average, that doesn’t tell us *how much less*, or whether that difference is consistent across groups. We need a way to separate hitters into tiers and compare the actual distributions of pitch locations across those tiers.
+
+That’s where an ANOVA model comes in — to measure not just **whether** there's a relationship, but **how big** it is and whether it truly impacts how pitchers approach different types of hitters.
+
 ### ANOVA: Do Location Patterns Differ by Hitter Quality?
 
 To measure **practical differences**, I ran a two-way ANOVA using three hitter tiers — **Elite**, **Average**, and **Poor** — and the three main pitch zones.
+
+---
+
+**What is ANOVA and why use it here?**
+
+ANOVA (Analysis of Variance) is a statistical test that helps us compare the **means** of multiple groups to see if the differences between them are significant. In this case, it tells us whether:
+- Pitchers throw to different **zones** depending on hitter quality.
+- Those differences are large enough to matter — and not just due to random variation.
+
+Unlike simple correlations, ANOVA helps show whether **entire groups** (like elite vs. poor hitters) are treated differently in how they’re pitched.
+
+---
 
 ![Image 21](21.jpeg)
 
@@ -223,7 +243,6 @@ The boxplot reveals **large overlap** in how zones are distributed across hitter
 
 **Takeaway**: Pitchers make only **modest location adjustments** based on hitter quality. A consistent strategy is applied to most hitters, elite or not.
 
----
 
 ### If Not Location, Then What? Let's Talk Pitch Type
 
