@@ -194,14 +194,17 @@ So I asked: how does location correlate with offensive performance across the le
 ![Image 20](20.jpeg)  
 <sub>Heatmap showing correlations between zone location and hitting metrics</sub>
 
-Key findings:
+This heatmap shows how different pitch zone locations (Zone 1: Heart, Zone 2: Shadow, Zone 3: Chase, Zone 4: Waste) correlate with common offensive stats. A **negative value** means that as a stat increases (e.g., SLG or wOBA), that pitch location is seen **less** often. A **positive value** means better hitters see that type of pitch location **more** often. Correlation values closer to -1 or 1 indicate stronger relationships; values near 0 suggest little to no connection.
 
-- **Heart zone (Zone 1)**: Strong **negative correlation** with `wOBA`, `SLG`, `barrel%`, and `hard hit%`. The better the hitter, the fewer pitches they see in the Heart.
-- **Shadow zone (Zone 2)**: Similar, but **slightly weaker** negative correlations.
-- **Chase & Waste zones (Zones 3 & 4)**: Positive correlation. Better hitters see **more** pitches in these harder-to-hit regions.
+**Key findings:**
 
-In short: pitchers are avoiding the zone — particularly the Heart — against top hitters. But how much are they really adjusting?
+- **Heart zone (Zone 1)**: Strong negative correlation with `wOBA`, `SLG`, `barrel%`, and `hard hit%`. The better the hitter, the fewer pitches they see in the Heart.
 
+- **Shadow zone (Zone 2)**: Similar trend, but with slightly weaker negative correlations. Good hitters still see fewer borderline pitches, just not as dramatically.
+
+- **Chase & Waste zones (Zones 3 & 4)**: Positive correlation. Better hitters see more pitches in these harder-to-hit regions — likely because pitchers are trying to get them to chase.
+
+In short: pitchers are avoiding the strike zone — particularly the Heart — when facing top hitters. But how much are they really adjusting?
 ---
 
 ### ANOVA: Do Location Patterns Differ by Hitter Quality?
