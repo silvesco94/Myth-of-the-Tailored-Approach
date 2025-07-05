@@ -244,6 +244,13 @@ The boxplot reveals **large overlap** in how zones are distributed across hitter
 
 **Takeaway**: Pitchers make only **modest location adjustments** based on hitter quality. A consistent strategy is applied to most hitters, elite or not.
 
+### What about lineup protection? 
+
+The last thing I can think of is lineup protection. Judge probably has seen a lot of strikes recently because last year he was with Soto and this year the Yankees offense is actually quite good. Ohtani also has great protection as the whole Dodgers lineup is essentially an all star team. However, the fact that Ohtani used to play for a really poor hitting team in the Angels I thought I'd take a look to see if Ohtani is getting better pitches as a Dodger then he was as an angel. 
+
+![Image 25](25.jpeg)
+
+There is almost no change in where Ohtani has been pitched. I know this is anectotdal, but short of combing through every lineup in every game, this is a pretty good test to see what lineup protection each player has and the effect that it has. Regardless of who was hitting behind him in the Angels, chances are it wasnt as strong as Betts and Freeman. I think it is safe to say lineup is not making too much of an impact. 
 
 ### If Not Location, Then What? Let's Talk Pitch Type
 
@@ -280,6 +287,8 @@ This chart breaks it down further by Fastball% and Offspeed%:
 - **Average** hitters sit in between.
 
 ---
+
+
 
 ### Final Takeaway
 
