@@ -1,3 +1,6 @@
+[⬅️ Back to War Games](https://silvesco94.github.io/war_games/)
+
+
 # The Myth of the Tailored Approach: Are Pitchers Treating All Hitters the Same?
 ## The Numbers Don’t Lie: Pitchers Still Challenge Judge and Ohtani — But Why?
 By Scott Silverstein 
